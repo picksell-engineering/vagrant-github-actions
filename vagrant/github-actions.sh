@@ -5,6 +5,8 @@ GH_RUNNER_LABELS=$2
 set -e
 export DEBIAN_FRONTEND=noninteractive
 
+sudo usermod -aG docker $USER
+
 mkdir -p actions-runner && cd actions-runner
 
 wget -q https://github.com/actions/runner/releases/download/v2.275.1/actions-runner-linux-x64-$GH_RUNNER_VERSION.tar.gz

@@ -10,8 +10,8 @@ Vagrant.configure("2") do |config|
       runner.vm.hostname = "github-actions-vagrant-runner-#{index}.box"
 
       runner.vm.provider "virtualbox" do |vb|
-        vb.cpus = 2
-        vb.memory = 2048
+        vb.cpus = 8
+        vb.memory = 4096
       end
 
       runner.vm.provision :shell, :path => "vagrant/provision.sh"

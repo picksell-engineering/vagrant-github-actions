@@ -10,7 +10,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt update
 
 sudo apt install -y nodejs npm yarn
-sudo apt install -y git
+sudo apt install -y git jq
 sudo apt install -y docker.io docker-compose
 
 sudo systemctl enable docker

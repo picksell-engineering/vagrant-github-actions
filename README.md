@@ -7,7 +7,7 @@ Than install `vagrant-dotenv` plugin:
 
 ```sh
 vagrant plugin install vagrant-vbguest
-vagrant plugin install vagrant-dotenv
+vagrant plugin install vagrant-env
 ```
 
 ## Usage

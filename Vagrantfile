@@ -6,12 +6,12 @@ Vagrant.configure("2") do |config|
 
   tokens.each_with_index do |token, index|
     config.vm.define "runner-#{index}" do |runner|
-      runner.vm.box = "generic/debian10"
+      runner.vm.box = "generic/debian11"
       runner.vm.hostname = "github-actions-vagrant-runner-#{index}.box"
 
       runner.vm.provider "virtualbox" do |vb|
         vb.cpus = 8
-        vb.memory = 4096
+        vb.memory = 8196
       end
 
       runner.vm.provision :shell, :path => "vagrant/provision.sh"
